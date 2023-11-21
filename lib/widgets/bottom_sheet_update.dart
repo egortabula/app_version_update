@@ -40,11 +40,11 @@ class BottomSheetUpdateVersion extends Container {
                 content ?? const SizedBox.shrink(),
                 mandatory && content == null
                     ? const Text(
-                        'There is an update required, please update your app.',
+                        'Пожалуйста обновите приложение до последней версии',
                       )
                     : !mandatory && content == null
                         ? const Text(
-                            'An update is available would you like to update now ?',
+                            'Доступно обновление, желаете обновиться?',
                           )
                         : const SizedBox.shrink(),
               ],
@@ -58,10 +58,10 @@ class BottomSheetUpdateVersion extends Container {
                         minWidth: 140.0,
                         onPressed: () =>
                             Navigator.pop(context, (route) => false),
-                        color: Colors.redAccent,
+                        color: const Color(0xffDBD2CA),
                         child: const Text(
-                          'Update Later',
-                          style: TextStyle(color: Colors.white),
+                          'Обновить позже',
+                          style: TextStyle(color: Color(0xff2B2C34)),
                         ),
                       ),
                 MaterialButton(
@@ -69,9 +69,9 @@ class BottomSheetUpdateVersion extends Container {
                   onPressed: () async => await launchUrl(
                       Uri.parse(appVersionResult!.storeUrl!),
                       mode: LaunchMode.externalApplication),
-                  color: Colors.green,
+                  color: const Color(0xffE7623F),
                   child: const Text(
-                    'Update',
+                    'Обновить',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
