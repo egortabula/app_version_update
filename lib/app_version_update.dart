@@ -170,6 +170,7 @@ class AppVersionUpdate {
       Widget? content}) async {
     await showModalBottomSheet(
         isDismissible: !mandatory,
+        useSafeArea: true,
         context: context!,
         builder: (context) => BottomSheetUpdateVersion(
               appVersionResult: appVersionResult,
